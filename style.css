@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: "Sprat";
-  src: url("./assets/fonts/SpratCndThin.woff2") format("woff2"),
-    url("./assets/fonts/SpratCndThin.woff") format("woff");
+  src: url("./assets/fonts/SpratCndRegular.woff2") format("woff2"),
+    url("./assets/fonts/SpratCndRegular.woff") format("woff");
 }
 
 html,
@@ -18,7 +18,6 @@ body {
 }
 
 body {
-  /* position: relative;  */
   box-sizing: border-box;
 }
 
@@ -44,11 +43,12 @@ canvas {
 
 .privacyStatement.show {
   position: absolute;
+  opacity: 100%;
   height: 100%;
   width: 100%;
   color: white;
   font-size: 12px;
-  mix-blend-mode: difference;
+  mix-blend-mode: soft-light;
   transition: opacity 0.5s ease-in-out;
   overflow: hidden;
   font-family: "Sprat", serif;
@@ -62,11 +62,35 @@ canvas {
   width: 100%;
   color: white;
   font-size: 12px;
-  mix-blend-mode: difference;
+  mix-blend-mode: soft-light;
   transition: opacity 0.5s ease-in-out;
   overflow: hidden;
   font-family: "Sprat", serif;
   font-size: 100%;
+}
+
+.emoji.show {
+  opacity: 100%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out;
+  font-size: 500%;
+}
+
+.emoji.hide {
+  opacity: 0%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out;
+  font-size: 500%;
 }
 
 .wrapper {
@@ -75,18 +99,11 @@ canvas {
   margin-bottom: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  max-width: 375px;
+  max-width: 325px;
   background: rgb(205, 220, 57);
   color: black;
   padding: 10px 10px 10px 10px;
   border-radius: 5px;
-}
-
-.wrapper.hide {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  transition: all 0.25s ease-in-out;
 }
 
 .cookieConsent p {
@@ -113,7 +130,7 @@ canvas {
   border-radius: 5px;
   background: rgb(139, 195, 74);
   cursor: pointer;
-  transition: all 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
   font-family: "Space Mono", monospace;
 }
 
