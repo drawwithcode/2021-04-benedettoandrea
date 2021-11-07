@@ -1,8 +1,117 @@
-html, body {
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+html,
+body {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  font-family: "Space Grotesk", sans-serif;
+  background: black;
+  /* background: rgb(255, 235, 59); */
+}
+
+body {
+  /* position: relative;  */
+  box-sizing: border-box;
 }
 
 canvas {
   display: block;
+}
+
+.loadingclass {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.container1,
+.container2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.container2.hide {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.wrapper {
+  position: fixed;
+  bottom: 0%;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 375px;
+  background: rgb(205, 220, 57);
+  color: black;
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+}
+
+#cock {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-size: 12px;
+  mix-blend-mode: difference;
+}
+
+.wrapper.hide {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.25s ease-in-out;
+}
+
+.cookieConsent p {
+  margin: 0px 0 10px 0;
+}
+
+.cookieConsent .buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  align-items: stretch;
+  align-content: normal;
+}
+
+.buttons .item {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 500px;
+  border-radius: 5px;
+  background: rgb(139, 195, 74);
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  font-family: "Space Mono", monospace;
+}
+
+.buttons button:hover {
+  background-color: rgb(233, 30, 99);
+  color: white;
 }
