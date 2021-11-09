@@ -5,7 +5,7 @@ function setup() {
 
 function draw() {
   if (frameCount == 4) {
-    let saved = createSpan("done. now redirecting");
+    let saved = createSpan("done.");
     saved.parent("saveState");
   } else if (frameCount > 4) {
     window.open(
