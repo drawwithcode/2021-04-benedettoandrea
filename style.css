@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: "Sprat";
-  src: url("./assets/fonts/SpratCndRegular.woff2") format("woff2"),
-    url("./assets/fonts/SpratCndRegular.woff") format("woff");
+  src: url("./assets/fonts/SpratCndThin.woff2") format("woff2"),
+    url("./assets/fonts/SpratCndThin.woff") format("woff");
 }
 
 html,
@@ -113,16 +113,12 @@ canvas {
 }
 
 .cookieConsent .buttons {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: normal;
-  align-items: stretch;
-  align-content: normal;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
 }
 
 .buttons .item {
-  margin-right: 10px;
   padding: 5px 10px;
   border: none;
   outline: none;

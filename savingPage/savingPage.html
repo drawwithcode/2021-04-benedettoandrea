@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <meta name="theme-color" content="#012456" />
+    <!--title-->
+    <title>Loading</title>
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--style-->
+    <style>
+      body {
+        background-color: #012456;
+        font-family: "Source Code Pro", monospace;
+        color: yellow;
+        font-size: xx-small;
+        font-weight: 400;
+      }
+      #blinkingText {
+        font-weight: 900;
+        animation: blinker 1s step-start infinite;
+      }
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
+    </style>
+    <!--p5 libraries-->
+    <script src="../libraries/p5.min.js"></script>
+    <script src="../libraries/p5.sound.min.js"></script>
+    <!--p5 script-->
+    <script src="/savingPage/savingPage.js"></script>
+  </head>
+  <body>
+    <div id="p5_loading" class="loadingclass"></div>
+    <p id="loading">loading<span id="blinkingText">_</span><br /></p>
+  </body>
+</html>

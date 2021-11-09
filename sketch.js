@@ -10,6 +10,9 @@ let posY;
 let privacyStatementBoundingClientRectBottom;
 let difference;
 
+let urlString = window.location.href;
+let url = new URL(urlString);
+
 function setup() {
   createCanvas(windowWidth, windowHeight).parent("container");
   rectMode(CENTER);
@@ -21,10 +24,6 @@ function setup() {
   privacyStatementBoundingClientRectBottom =
     privacyStatementBoundingClientRect.bottom;
   difference = privacyStatementBoundingClientRectBottom - height;
-
-  // console.log("draw " + privacyStatementBoundingClientRect.bottom);
-  // console.log("draw " + height);
-  // console.log("draw " + difference);
 }
 
 function draw() {
@@ -40,13 +39,12 @@ function draw() {
 
   if (width > height) {
     //horizontal viewport
-    posY = difference * Math.pow(sin(frameCount / width / 2), 2);
+    posY = difference * Math.pow(sin((frameCount / width) * 4), 2);
   } else {
     // vertical viewport
     posY = difference * Math.pow(sin(frameCount / height / 2), 2);
   }
 
-  // console.log(difference);
   privacyStatementP5.position(0, -posY);
 
   // desktop callback functions
@@ -70,10 +68,6 @@ function windowResized() {
   privacyStatementP5.position(0, 0);
 
   getDivAndCanvas();
-
-  // console.log(privacyStatementBoundingClientRect.bottom);
-  // console.log(height);
-  // console.log(difference);
 }
 
 function learnMoreToggle() {
@@ -108,4 +102,8 @@ function getDivAndCanvas() {
   privacyStatementBoundingClientRectBottom =
     privacyStatementBoundingClientRect.bottom;
   difference = privacyStatementBoundingClientRectBottom - height;
+}
+
+function savingPage() {
+  window.open("/savingPage/savingPage.html", "_self");
 }
