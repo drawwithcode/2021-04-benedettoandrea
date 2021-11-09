@@ -4,10 +4,11 @@ function setup() {
 }
 
 function draw() {
-  if (frameCount == 4) {
-    let saved = createSpan("done.");
-    saved.parent("saveState");
-  } else if (frameCount > 4) {
+  let saving = document.querySelector("#saveState");
+  if (frameCount == 5) {
+    saving.parentNode.removeChild(saving);
+    createSpan("done.");
+  } else if (frameCount > 5) {
     window.open(
       "/2021-04-benedettoandrea/siteNotAvailable/siteNotAvailable.html",
       "_self"

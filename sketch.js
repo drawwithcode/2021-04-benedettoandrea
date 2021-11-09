@@ -28,6 +28,11 @@ function draw() {
   clear();
   line(0, 0, width, height);
   line(width, 0, 0, height);
+
+  /* - draws a rectangle inside the canvas
+     - sadly its top border isn't viewable on some browsers (Chrome on Android)
+     - temporarily substituted by a div (.boundingBox), which has a similar problem
+  */
   // push();
   // strokeWeight(2);
   // rect(width / 2, height / 2, windowWidth, windowHeight);
@@ -39,6 +44,7 @@ function draw() {
   learnMoreEmoji = select("#learnMoreEmoji");
   privacyStatementP5 = select(".privacyStatement");
 
+  // div animation
   if (width > height) {
     //horizontal viewport
     posY = difference * Math.pow(sin((frameCount / width) * 4), 2);
@@ -46,7 +52,6 @@ function draw() {
     // vertical viewport
     posY = difference * Math.pow(sin(frameCount / height / 2), 2);
   }
-
   privacyStatementP5.position(0, -posY);
 
   // desktop callback functions
@@ -66,9 +71,7 @@ function draw() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-
   privacyStatementP5.position(0, 0);
-
   getDivAndCanvas();
 }
 
