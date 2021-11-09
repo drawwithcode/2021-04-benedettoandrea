@@ -105,5 +105,5 @@ function getDivAndCanvas() {
 }
 
 function savingPage() {
-  window.open("/savingPage/savingPage.html", "_self");
+  window.open("/2021-04-benedettoandrea/savingPage/savingPage.html", "_self");
 }

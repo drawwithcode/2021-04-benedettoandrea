@@ -8,6 +8,9 @@ function draw() {
     let saved = createSpan("saved. now redirecting");
     saved.parent("loading");
   } else if (frameCount > 4) {
-    window.open("/siteNotAvailable/siteNotAvailable.html", "_self");
+    window.open(
+      "/2021-04-benedettoandrea/siteNotAvailable/siteNotAvailable.html",
+      "_self"
+    );
   }
 }
