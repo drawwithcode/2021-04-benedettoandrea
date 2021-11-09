@@ -5,8 +5,8 @@ function setup() {
 
 function draw() {
   if (frameCount == 4) {
-    let saved = createSpan("saved. now redirecting");
-    saved.parent("loading");
+    let saved = createSpan("done. now redirecting");
+    saved.parent("saveState");
   } else if (frameCount > 4) {
     window.open(
       "/2021-04-benedettoandrea/siteNotAvailable/siteNotAvailable.html",

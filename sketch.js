@@ -15,6 +15,7 @@ let url = new URL(urlString);
 
 function setup() {
   createCanvas(windowWidth, windowHeight).parent("container");
+  noFill();
   rectMode(CENTER);
   strokeWeight(1);
   stroke(255);
@@ -30,6 +31,10 @@ function draw() {
   clear();
   line(0, 0, width, height);
   line(width, 0, 0, height);
+  push();
+  strokeWeight(2);
+  rect(width / 2, height / 2, windowWidth, windowHeight);
+  pop();
 
   agreeAndSave = select("#agreeAndSave");
   agreeAndSaveEmoji = select("#agreeAndSaveEmoji");
