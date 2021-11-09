@@ -10,9 +10,6 @@ let posY;
 let privacyStatementBoundingClientRectBottom;
 let difference;
 
-let urlString = window.location.href;
-let url = new URL(urlString);
-
 function setup() {
   createCanvas(windowWidth, windowHeight).parent("container");
   noFill();
@@ -31,10 +28,10 @@ function draw() {
   clear();
   line(0, 0, width, height);
   line(width, 0, 0, height);
-  push();
-  strokeWeight(2);
-  rect(width / 2, height / 2, windowWidth, windowHeight);
-  pop();
+  // push();
+  // strokeWeight(2);
+  // rect(width / 2, height / 2, windowWidth, windowHeight);
+  // pop();
 
   agreeAndSave = select("#agreeAndSave");
   agreeAndSaveEmoji = select("#agreeAndSaveEmoji");

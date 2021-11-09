@@ -41,6 +41,20 @@ canvas {
   transition: opacity 0.5s ease-in-out;
 }
 
+.boundingBox {
+  box-sizing: border-box;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+}
+
 .privacyStatement.show {
   display: inline;
   position: absolute;
