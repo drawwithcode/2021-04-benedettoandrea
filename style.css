@@ -18,7 +18,7 @@ body {
 }
 
 body {
-  box-sizing: border-box;
+  box-sizing: relative;
 }
 
 canvas {
@@ -32,39 +32,41 @@ canvas {
 }
 
 .container {
-  position: absolute;
+  position: relative;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .privacyStatement.show {
+  display: inline;
   position: absolute;
+  top: 0px;
   opacity: 100%;
-  height: 100%;
   width: 100%;
-  color: white;
-  font-size: 12px;
-  mix-blend-mode: soft-light;
   transition: opacity 0.5s ease-in-out;
-  overflow: hidden;
-  font-family: "Sprat", serif;
-  font-size: 100%;
 }
 
 .privacyStatement.hide {
+  display: inline;
   position: absolute;
+  top: 0px;
   opacity: 0%;
-  height: 100%;
   width: 100%;
-  color: white;
-  font-size: 12px;
-  mix-blend-mode: soft-light;
   transition: opacity 0.5s ease-in-out;
-  overflow: hidden;
+}
+
+.privacyStatementText {
+  position: relative;
+  word-break: break-all;
+  background: rgb(136, 14, 79);
+  margin: 10px;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
   font-family: "Sprat", serif;
   font-size: 100%;
 }
