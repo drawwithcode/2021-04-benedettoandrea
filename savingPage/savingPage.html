@@ -19,15 +19,22 @@
     />
     <!--style-->
     <style>
+      html,
       body {
+        /* display: block; */
+        overflow: hidden;
+        /* styles, colours */
         background-color: #012456;
-        font-family: "Source Code Pro", monospace;
         color: yellow;
+        /* fonts */
+        font-family: "Source Code Pro", monospace;
         font-size: xx-small;
         font-weight: 400;
       }
       #blinkingText {
+        /* fonts */
         font-weight: 900;
+        /* animations */
         animation: blinker 1s step-start infinite;
       }
       @keyframes blinker {

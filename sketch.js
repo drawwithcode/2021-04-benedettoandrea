@@ -1,27 +1,26 @@
-let agreeAndSave;
-let learnMore;
 let privacyStatementP5;
+let agreeAndSave;
 let agreeAndSaveEmoji;
+let learnMore;
 let learnMoreEmoji;
 
 let privacyStatementJS;
 let privacyStatementBoundingClientRect;
-let posY;
 let privacyStatementBoundingClientRectBottom;
 let difference;
+let posY;
 
 function setup() {
+  // create the canvas inside #container"
   createCanvas(windowWidth, windowHeight).parent("container");
+
+  // styling
   noFill();
   rectMode(CENTER);
   strokeWeight(1);
   stroke(255);
 
   getDivAndCanvas();
-
-  privacyStatementBoundingClientRectBottom =
-    privacyStatementBoundingClientRect.bottom;
-  difference = privacyStatementBoundingClientRectBottom - height;
 }
 
 function draw() {
@@ -38,15 +37,15 @@ function draw() {
   // rect(width / 2, height / 2, windowWidth, windowHeight);
   // pop();
 
+  privacyStatementP5 = select(".privacyStatement");
   agreeAndSave = select("#agreeAndSave");
   agreeAndSaveEmoji = select("#agreeAndSaveEmoji");
   learnMore = select("#learnMore");
   learnMoreEmoji = select("#learnMoreEmoji");
-  privacyStatementP5 = select(".privacyStatement");
 
   // div animation
   if (width > height) {
-    //horizontal viewport
+    // horizontal viewport
     posY = difference * Math.pow(sin((frameCount / width) * 4), 2);
   } else {
     // vertical viewport
@@ -71,7 +70,10 @@ function draw() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+
+  // reset the position of #privacyStatement
   privacyStatementP5.position(0, 0);
+
   getDivAndCanvas();
 }
 
@@ -99,11 +101,13 @@ function learnMoreEmojiHide() {
   learnMoreEmoji.class("emoji hide");
 }
 
+// this function calculates the dimensions of #privacyStatement", which can then be used to move it with its contents
+// it restates the variables so that the div moves correctly even when the viewport changes dimensions.
+// for further info, see https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
 function getDivAndCanvas() {
   privacyStatementJS = document.getElementById("privacyStatement");
   privacyStatementBoundingClientRect =
     privacyStatementJS.getBoundingClientRect();
-
   privacyStatementBoundingClientRectBottom =
     privacyStatementBoundingClientRect.bottom;
   difference = privacyStatementBoundingClientRectBottom - height;

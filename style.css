@@ -8,145 +8,190 @@
 
 html,
 body {
+  /* position, dimensions */
+  position: absolute;
   width: 100%;
   height: 100%;
   margin: auto;
   padding: 0;
+  /* behavioral settings */
   overflow: hidden;
-  font-family: "Space Grotesk", sans-serif;
+  /* styles, colours */
   background: black;
-}
-
-body {
-  position: absolute;
+  /* fonts */
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
 }
 
 canvas {
+  /* behavioral settings */
   display: block;
 }
 
 .loadingclass {
+  /* position, dimensions */
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-.container {
+#container {
+  /* position, dimensions */
   position: absolute;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  /* behavioral settings */
   display: flex;
   align-items: center;
   justify-content: center;
+  /* animations */
   transition: opacity 0.5s ease-in-out;
 }
 
 .boundingBox {
-  box-sizing: border-box;
+  /* position, dimensions */
   position: absolute;
   height: 100%;
   width: 100%;
+  /* behavioral settings */
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.5s ease-in-out;
+  /* styles, colours */
   border-color: white;
   border-width: 1px;
   border-style: solid;
+  /* animations */
+  transition: opacity 0.5s ease-in-out;
 }
 
 .privacyStatement.show {
-  display: inline;
+  /* position, dimensions */
   position: absolute;
-  top: 0px;
-  opacity: 100%;
   width: 100%;
+  top: 0px;
+  /* behavioral settings */
+  display: inline;
+  opacity: 100%;
+  /* animations */
   transition: opacity 0.5s ease-in-out;
 }
 
 .privacyStatement.hide {
-  display: inline;
+  /* position, dimensions */
   position: absolute;
-  top: 0px;
-  opacity: 0%;
   width: 100%;
+  top: 0px;
+  /* behavioral settings */
+  display: inline;
+  opacity: 0%;
+  /* animations */
   transition: opacity 0.5s ease-in-out;
 }
 
 .privacyStatementText {
+  /* position, dimensions */
   position: relative;
-  word-break: break-all;
-  background: rgb(136, 14, 79);
   margin: 10px;
-  color: white;
   padding: 5px;
+  /* behavioral settings */
+  word-break: break-all;
+  /* styles, colours */
+  background: rgb(136, 14, 79);
+  color: white;
   border-radius: 5px;
+  /* fonts */
   font-family: "Sprat", serif;
   font-size: 100%;
 }
 
 .emoji.show {
-  opacity: 100%;
+  /* position, dimensions */
   position: absolute;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  /* behavioral settings */
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.5s ease-in-out;
+  /* styles, colours */
+  opacity: 100%;
+  /* fonts */
   font-size: 500%;
+  /* animations */
+  transition: opacity 0.5s ease-in-out;
 }
 
 .emoji.hide {
-  opacity: 0%;
+  /* position, dimensions */
   position: absolute;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  /* behavioral settings */
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.5s ease-in-out;
+  /* styles, colours */
+  opacity: 0%;
+  /* fonts */
   font-size: 500%;
+  /* animations */
+  transition: opacity 0.5s ease-in-out;
 }
 
 .wrapper {
+  /* position, dimensions */
   position: fixed;
   bottom: 0%;
   margin-bottom: 10px;
   margin-left: 10px;
   margin-right: 10px;
   max-width: 325px;
+  padding: 10px 10px 10px 10px;
+  /* styles, colours */
   background: rgb(205, 220, 57);
   color: black;
-  padding: 10px 10px 10px 10px;
   border-radius: 5px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
 .cookieConsent p {
+  /* position, dimensions */
   margin: 0px 0 10px 0;
 }
 
 .cookieConsent .buttons {
+  /* behavioral settings */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
 }
 
 .buttons .item {
-  padding: 5px 10px;
+  /* position, dimensions */
   border: none;
-  outline: none;
-  color: black;
-  font-size: 16px;
-  font-weight: 500px;
-  border-radius: 5px;
-  background: rgb(139, 195, 74);
+  padding: 5px 10px;
+  /* behavioral settings */
   cursor: pointer;
-  transition: color 0.25s ease-in-out;
+  /* styles, colours */
+  background: rgb(139, 195, 74);
+  color: black;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  /* fonts */
   font-family: "Space Mono", monospace;
+  font-size: 16px;
+  font-weight: 400;
+  /* animations */
+  transition: color 0.25s ease-in-out;
 }
 
 .buttons button:hover {
+  /* styles, colours */
   background-color: rgb(233, 30, 99);
   color: white;
 }
